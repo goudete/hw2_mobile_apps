@@ -15,24 +15,24 @@ public class ThirdActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_third);
+//        setContentView(R.layout.activity_third);
 
         Intent intent = getIntent();
         String final_story = intent.getExtras().getString("final_story");
-
-        TextView story = new TextView(this);
-        story.setText(final_story);
-        story.setTextSize(30);
-        story.setPadding(5, 50, 5, 100 );
-        LinearLayout ll_story = findViewById(R.id.third_ll);
-
-        ll_story.addView(story);
-
-        //Grab button
-        Button back_button = findViewById(R.id.back_to_home);
-        back_button.setOnClickListener(v -> {
-            launchNextActivity(v);
-        });
+//
+//        TextView story = new TextView(this);
+//        story.setText(final_story);
+//        story.setTextSize(30);
+//        story.setPadding(5, 50, 5, 100 );
+//        LinearLayout ll_story = findViewById(R.id.third_ll);
+//
+//        ll_story.addView(story);
+//
+//        //Grab button
+//        Button back_button = findViewById(R.id.back_to_home);
+//        back_button.setOnClickListener(v -> {
+//            launchNextActivity(v);
+//        });
 
     }
 
