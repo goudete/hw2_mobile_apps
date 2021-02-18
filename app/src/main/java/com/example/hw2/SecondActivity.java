@@ -12,6 +12,7 @@ import android.widget.Toast;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -54,7 +55,6 @@ public class SecondActivity extends AppCompatActivity {
     }
 
     public void grabUserInput(EditText brewName, EditText startDate, EditText endDate, Switch highPoint) {
-        Log.d("MAMMOTH", "Mammoth");
         // grab user inputs
         String brew = brewName.getText().toString();
         String start = startDate.getText().toString();
@@ -156,11 +156,10 @@ public class SecondActivity extends AppCompatActivity {
             public void onSuccess(int statusCode, cz.msebera.android.httpclient.Header[] headers, byte[] responseBody) {
                 Log.d("api response", new String(responseBody));
                 try {
-                    JSONObject json = new JSONObject(new String(responseBody));
+                    JSONArray json = new JSONArray(new String(responseBody));
 
                     Intent intent = new Intent(SecondActivity.this, ThirdActivity.class);
                     intent.putExtra("json_response", json.toString());
-
                     startActivity(intent);
 
                 } catch (JSONException e) {

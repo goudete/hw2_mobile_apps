@@ -2,12 +2,13 @@
     <string name="app_name">hw2</string>
     <string name="home_button">Continue</string>
     <string name="search_button">Search</string>
-    <string name="brew_name">Search by beer name...</string>
     <string name="start_date">Start Date</string>
     <string name="end_date">End Date</string>
     <string name="high_point">High Point Beer?</string>
-    <string name="to_date_text">Brewed</string>
-    <string name="end_date_text">to</string>
+    <string name="to_date_text">Brewed (mm-yyyy)</string>
+    <string name="end_date_text">to (mm-yyyy)</string>
+    <string name="search_text">Search by beer name...</string>
+    <string name="recycler_title">Beer Results</string>
 
 
 </resources>
