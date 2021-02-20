@@ -27,7 +27,7 @@ public class SecondActivity extends AppCompatActivity {
     private Switch highPoint;
     private String json_response;
 
-    private static String api_url = "https://api.punkapi.com/v2/beers?";
+    private String api_url;
     private static AsyncHttpClient client = new AsyncHttpClient();
 
 
@@ -35,6 +35,7 @@ public class SecondActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
+
 
         //Grab ui elements
         searchButton = findViewById(R.id.search_button);
@@ -60,6 +61,7 @@ public class SecondActivity extends AppCompatActivity {
         String start = startDate.getText().toString();
         String end = endDate.getText().toString();
         Boolean highP = highPoint.isChecked();
+        api_url = "https://api.punkapi.com/v2/beers?";
 
         // Validate inputs
         Boolean validBrew = validateBrew(brew);
