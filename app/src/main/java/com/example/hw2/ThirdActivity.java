@@ -55,8 +55,14 @@ public class ThirdActivity extends AppCompatActivity {
                 beers.add(beer);
             }
 
+            //Number of results
+            String number_of_results = Integer.toString(beers.size());
+            String title = getString(R.string.recycler_title, number_of_results);
+            TextView results_title = findViewById(R.id.recycler_title);
+            results_title.setText(title);
+
             //create beer adapter to pass in data
-            BeerAdapter adapter = new BeerAdapter(beers);
+            BeerAdapter adapter = new BeerAdapter(this, beers);
             //attach the adapter to recycler view to populate
             recyclerView.setAdapter(adapter);
             //layout manager

@@ -8,7 +8,7 @@
     <string name="to_date_text">Brewed (mm-yyyy)</string>
     <string name="end_date_text">to (mm-yyyy)</string>
     <string name="search_text">Search by beer name...</string>
-    <string name="recycler_title">Beer Results</string>
+    <string name="recycler_title">%1$s Beer Results</string>
 
 
 </resources>
